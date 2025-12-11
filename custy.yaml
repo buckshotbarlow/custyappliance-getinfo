@@ -36,8 +36,7 @@ node_list:
     dns_nameserver:
       - 192.168.1.99
       - 192.168.1.1
-  install:
-    automatic: true
+
 #Updated to reflect drive layout. Please change to reflect the configurations below. 
     device: /dev/nvme0n1
     datadisk: /dev/sda1
