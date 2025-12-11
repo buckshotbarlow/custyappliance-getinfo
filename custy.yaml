@@ -1,0 +1,54 @@
+# Please insert info for appliance build
+
+# Please change this info. This is for reference. 
+domain_name: rgsdemo.com
+cluster_name: rgsdemo
+node_list:
+  - hostname: red
+    ip: 192.168.1.11
+  - hostname: white
+    ip: 192.168.1.12
+  - hostname: blue
+    ip: 192.168.1.13
+
+  vcluster:
+    RANCHER_PASSWORD: Thenewuser1!
+  keycloak:
+    KEYCLOAK_PASSWORD: Thenewuser1!
+      #  rocky:
+      #ROCKY_PASSWORD: Thenewuser1!
+
+    #ipmis:
+    #  address: idrac or ilo info, please delete the one not being used. 
+    #  username: root
+    #  password: calvin
+  harbor:
+    HARBOR_PASSWORD: Thenewuser1!
+
+# harvester configuration
+
+# This is the VIP password. Please change the NTP and DNS servers also. 
+  token: Thenewuser1!
+  os:
+    password: Thenewuser1!
+    ntp_servers:
+      - 192.168.1.1
+    dns_nameserver:
+      - 192.168.1.99
+      - 192.168.1.1
+  install:
+    automatic: true
+#Updated to reflect drive layout. Please change to reflect the configurations below. 
+    device: /dev/nvme0n1
+    datadisk: /dev/sda1
+    vip_mode: static
+    vip: 192.168.1.99
+    management_interface:
+      interfaces:
+        - name: eno1
+      method: static
+      subnet_mask: 255.255.255.0
+      gateway: 192.168.1.1
+      bond_options:
+        mode: balance-tlb
+        miimon: 100
