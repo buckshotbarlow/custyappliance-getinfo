@@ -16,7 +16,7 @@
 #  - Data Plane
 #    - Which vlan? Which interfaces?
 
-# Example Password: P@22w0rd12345, please do not put in your class password!!!
+# Example Password for the cluster: P@22w0rd12345, please do not put in your class password!!!
 Password: 
 # Please change this info. This is for reference. 
 #Example domain_name: rgsdemo.com
