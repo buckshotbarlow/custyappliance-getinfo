@@ -1,5 +1,22 @@
-# Please insert info for appliance build
-# Example Password: P@22w0rd12345
+# Please insert info for appliance build. Basic info needed:
+# How many nodes are in the cluster? 
+# Do you have a time server?
+# Do you have a DNS server?
+# Do you run LDAP or AD? Both? Casport?
+# Do you have external storage?
+#  - If so, can you give us the OEM, Model and connection speed?
+#    - 
+# How many network switches are the nodes connecting to?
+#   - Networking examples: https://docs.harvesterhci.io/v1.7/advanced/storagenetwork/
+# How do you invision the different planes in Kubernetes:
+#  - Control Plane
+#    - Which vlan? Which interfaces?
+#  - Kube API Server plane
+#    - Which vlan? Which interfaces?
+#  - Data Plane
+#    - Which vlan? Which interfaces?
+
+# Example Password: P@22w0rd12345, please do not put in your class password!!!
 Password: 
 # Please change this info. This is for reference. 
 #Example domain_name: rgsdemo.com
