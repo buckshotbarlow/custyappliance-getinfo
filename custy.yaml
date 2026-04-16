@@ -1,43 +1,51 @@
 # Please insert info for appliance build
-
+# Example Password: P@22w0rd12345
+Password: 
 # Please change this info. This is for reference. 
-domain_name: rgsdemo.com
-cluster_name: rgsdemo
+#Example domain_name: rgsdemo.com
+domain_name
+#Example cluster_name: rgsdemo
+cluster_name: 
+# Example node_list:
+#  - hostname: red
+#    ip: 192.168.1.11
+#  - hostname: white
+#    ip: 192.168.1.12
+#  - hostname: blue
+#    ip: 192.168.1.13
 node_list:
-  - hostname: red
-    ip: 192.168.1.11
-  - hostname: white
-    ip: 192.168.1.12
-  - hostname: blue
-    ip: 192.168.1.13
-
-  vcluster:
-    RANCHER_PASSWORD: Thenewuser1!
-  keycloak:
-    KEYCLOAK_PASSWORD: Thenewuser1!
-      #  rocky:
-      #ROCKY_PASSWORD: Thenewuser1!
+  - hostname: 
+    ip: 
+  - hostname: 
+    ip:
+  - hostname: 
+    ip: 
 
     #ipmis:
     #  address: idrac or ilo info, please delete the one not being used. 
     #  username: root
     #  password: calvin
-  harbor:
-    HARBOR_PASSWORD: Thenewuser1!
+    # It's ok to say none, or password is class.
+    ilo or idrac ip's:
+      username: 
+      password:
+    ilo or idrac ip's:
+      username:
+      password:
+    ilo or idrac ip's:
 
 # harvester configuration
 
 # This is the VIP password. Please change the NTP and DNS servers also. 
-  token: Thenewuser1!
-  os:
-    password: Thenewuser1!
-    ntp_servers:
-      - 192.168.1.1
-    dns_nameserver:
-      - 192.168.1.99
-      - 192.168.1.1
 
-#Updated to reflect drive layout. Please change to reflect the configurations below. 
+    ntp_servers:
+      # Example - 192.168.1.1
+      - 
+    dns_nameserver:
+      # Example - 192.168.1.99
+      - 
+
+#Updated to reflect drive layout. Please change to reflect the configurations below. This selection is an example.
     device: /dev/nvme0n1
     datadisk: /dev/sda1
     vip_mode: static
@@ -49,5 +57,9 @@ node_list:
       subnet_mask: 255.255.255.0
       gateway: 192.168.1.1
       bond_options:
-        mode: balance-tlb
+        # Pick one
+        mode: balance-tlb, active-failover, lacp
         miimon: 100
+        # Do you use Jumbo frames? if so, select MTU: 9000
+        MTU: 1500
+      # Do you need kernel tuning? If yes, use this area to insert variables. If you do not know, leave blank.
