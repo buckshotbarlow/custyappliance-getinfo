@@ -1,5 +1,5 @@
 # Please insert info for appliance build. Basic info needed:
-# How many nodes are in the cluster? 
+# How many nodes are in the cluster? What OEM? Are there different OEM's?
 # Do you have a time server?
 # Do you have a DNS server?
 # Do you run LDAP or AD? Both? Casport?
