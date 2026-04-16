@@ -6,6 +6,7 @@
 # Do you have external storage?
 #  - If so, can you give us the OEM, Model and connection speed?
 #    - 
+#    - Do they have an API that we need to integrate with?
 # How many network switches are the nodes connecting to?
 #   - Networking examples: https://docs.harvesterhci.io/v1.7/advanced/storagenetwork/
 # How do you invision the different planes in Kubernetes:
